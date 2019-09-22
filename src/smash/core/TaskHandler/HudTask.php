@@ -43,7 +43,7 @@ class HudTask extends Task
   
   public function onRun(int $currentTask)
   {
-    $world = Server::getInstance()->getLevelByName("world");
+    $world = Server::getInstance()->getDefaultLevel();
     if($world instanceof Level)
     {
       $players = $world->getPlayers():
