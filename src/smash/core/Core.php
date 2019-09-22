@@ -28,6 +28,7 @@ use smash\core\Commands\VersionCommand;
 use smash\core\Database\QueryManager;
 use smash\core\EventHandler\GlobalHandler;
 use smash\core\EventHandler\LobbyListener;
+use smash\core\EventHandler\HudTask;
 use smash\core\Reporter\Broadcast;
 use smash\core\Reporter\Console;
 
@@ -47,6 +48,7 @@ class Core extends PluginBase
 		$this->unregisterCommands('help', 'op', 'say', 'me', 'version');
 		$this->registerCommands();
 		$this->getScheduler()->scheduleRepeatingTask(new Broadcast(), 20 * 66);
+		$this->getScheduler()->scheduleRepeatingTask(new HudTask($this), 20);
 	}
 
 	public function onLoad()
