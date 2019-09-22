@@ -1,0 +1,36 @@
+#  /*
+#    *
+#   | |  | |
+#   | |__| | ___  _ __   ___  _ __
+#   |  __  |/ _ \| '_ \ / _ \| '__|
+#   | |  | | (_) | | | | (_) | |
+#   |_|  |_|\___/|_| |_|\___/|_|
+#    *
+#    * This program is private software: you can not redistribute it and/or modify
+#    * it under the terms of the GNUv3 Lesser General Public License as published by
+#    * the Free Software Foundation, either version 3 of the License, or
+#    * (at your option) any later version.
+#    *
+#    * @author PocketmineSmash, MikeGamerYT
+#    *
+#    */
+name: HonorCore
+main: smash\core\Core
+authors: [PocketmineSmash, MikeGamerYT]
+version: beta-1
+api-version: 3.0.0
+api: [3.0.0, 4.0.0]
+database: true
+description: Core for HonorGames
+
+default-permission: op
+prefix: '§a✔§f'
+load: STARTUP
+
+permissions:
+  core.cmd.rank:
+    description: rank permission
+    default: op
+  core.cmd.fly:
+    description: fly permission
+    default: op
