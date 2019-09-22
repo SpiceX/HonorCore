@@ -18,7 +18,7 @@
 declare(strict_types=1);
 namespace smash\core\TaskHandler;
 use smash\{
-  core\Loader
+  core\Core
     };
 use Scoreboards\{
   Scoreboards
@@ -35,7 +35,8 @@ use pocketmine\{
 class HudTask extends Task
 {
   private $plugin;
-  public function __construct(Loader $plugin)
+  
+  public function __construct(Core $plugin)
   {
     $this->plugin = $plugin;
     }
